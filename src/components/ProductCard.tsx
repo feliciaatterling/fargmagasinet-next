@@ -23,9 +23,8 @@ export const ProductCard = ({
   return (
     <Card className="w-[15vw] h-[400px] bg-white border border-gray-300 p-4 text-center shadow-sm rounded-none hover:shadow-xl transition-shadow duration-300">
       <CardHeader className="p-0">
-        <Image
+        <img
           src={imageUrl}
-          alt={title}
           width={288}
           height={200}
           className="object-cover w-full h-[300px]"

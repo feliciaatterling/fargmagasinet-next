@@ -9,7 +9,7 @@ export default function Navbar() {
     <div>
       <header className="w-full py-10 px-8 bg-white/50">
         <nav className="flex justify-evenly w-full text-xl">
-          <Link href="/om">
+          <Link href="/#om">
             <Button
               variant="ghost"
               className="text-3xl uppercase font-light hover:bg-transparent hover:scale-105"
@@ -41,7 +41,7 @@ export default function Navbar() {
               Tips & Trix
             </Button>
           </Link>
-          <Link href="#kontakt">
+          <Link href="/#kontakt">
             <Button
               variant="ghost"
               className="text-3xl uppercase font-light hover:bg-transparent hover:scale-105"

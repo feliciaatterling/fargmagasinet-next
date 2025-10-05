@@ -53,6 +53,26 @@ export default function Home() {
           <InfoCard imageUrl="/fönstervagnen.jpg" title="Fönstervagnen" />
         </div>
       </div>
+      <div id="om" className="py-1">
+        <h2 className="text-3xl my-5 font-bold uppercase">Om oss</h2>
+        <Separator
+          orientation="vertical"
+          className="w-10/12 mx-auto bg-gray-500 h-px"
+        />
+        <div className="w-3/4 mx-auto py-5">
+          <p>
+            Välkommen till Färgmagsinet! Här hittar du färger och måleriverktyg
+            som vi själva skulle vilja använda i våra projekt hemma. Vi brinner
+            för kvalitet och hållbarhet, och vill gärna dela med oss av vår
+            kunskap så att du får bästa möjliga resultat. Oavsett om du ska måla
+            om ett rum, restaurera en fasad eller bara vill ge något nytt liv,
+            finns vi här för att guida dig. Hos oss är det enkelt att hitta rätt
+            produkter, och vi strävar alltid efter personlig service och tips
+            som gör ditt projekt både roligare och lättare. Välkommen att
+            upptäcka färgens värld tillsammans med oss!
+          </p>
+        </div>
+      </div>
       <div id="kontakt" className="py-1">
         <h2 className="text-3xl my-5 font-bold uppercase">Kontakta oss</h2>
         <Separator
