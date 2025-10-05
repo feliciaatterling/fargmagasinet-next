@@ -7,25 +7,36 @@ import { useEffect, useState } from "react";
 const link =
   "https://docs.google.com/spreadsheets/d/e/2PACX-1vQahW7iwp4_-6QDunPE1z-NjnRRxr2xXj8HvuD3qZAGmVHe8F7JCRowQTOKQn8Q8L00qOj8qMxKYZa-/pub?output=csv";
 
+type Product = {
+  id: string;
+  name: string;
+  description: string;
+  image_url: string;
+};
+
 export default function Butiken() {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
     async function fetchData() {
       const res = await fetch(link);
       const text = await res.text();
 
-      // Parse CSV → array of rows
       const rows = text.split("\n").map((row) => row.split(","));
       const [header, ...data] = rows;
 
-      const products = data.map((row) =>
-        Object.fromEntries(
-          header.map((h, i) => [h.trim(), row[i]?.trim() || null])
-        )
-      );
+      const products: Product[] = data.map((row) => {
+        const obj: { [key: string]: string } = Object.fromEntries(
+          header.map((h, i) => [h.trim(), row[i]?.trim() || ""])
+        );
 
-      console.log(products);
+        return {
+          id: obj.id,
+          name: obj.name,
+          description: obj.description,
+          image_url: obj.image_url,
+        };
+      });
 
       setProducts(products);
     }

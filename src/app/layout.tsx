@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import { Separator } from "@radix-ui/react-separator";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,11 +27,6 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {/* <Navbar />
-        <Separator
-          orientation="vertical"
-          className="w-10/12 mx-auto bg-gray-500 h-px"
-        /> */}
         <main>{children}</main>
       </body>
     </html>
